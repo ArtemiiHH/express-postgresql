@@ -3,10 +3,11 @@ const app = express();
 const path = require("node:path");
 const userRouter = require("./routes/userRoutes");
 
+// Set EJS as view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", userRouter);
+app.use("/", userRouter);
 
 // Server
 const PORT = 3000;
