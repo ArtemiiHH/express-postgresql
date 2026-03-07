@@ -6,7 +6,7 @@ const userRouter = require("./routes/userRoutes");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.use("/", userRouter);
+app.get("/", userRouter);
 
 // Server
 const PORT = 3000;
