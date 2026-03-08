@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 const path = require("node:path");
-const userRouter = require("./routes/userRoutes");
+const router = require("./routes/userRoutes");
 
 // Set EJS as view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 // Register body parser
 app.use(express.urlencoded({ extended: true }));
-app.use("/", userRouter);
+app.use("/", router);
 
 // Server
 const PORT = 3000;
