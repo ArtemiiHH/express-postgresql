@@ -7,7 +7,7 @@ async function getUsernames(req, res) {
 }
 
 async function createUsernameGet(req, res) {
-  res.render("form");
+  res.render("form", { title: "Create username" });
 }
 
 async function createUsernamePost(req, res) {
