@@ -1,17 +1,11 @@
-const getUserName = (req, res) => {
+exports.getUserName = (req, res) => {
   console.log("usernames will be logged here - wip");
 };
 
-const displayForm = (req, res) => {
-  res.render("index");
+exports.displayForm = (req, res) => {
+  res.render("form");
 };
 
-const handleSubmit = (req, res) => {
+exports.handleSubmit = (req, res) => {
   console.log("username to be saved: ", req.body.username);
-};
-
-module.exports = {
-  getUserName,
-  displayForm,
-  handleSubmit,
 };

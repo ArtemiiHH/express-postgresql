@@ -6,7 +6,8 @@ const userRouter = require("./routes/userRoutes");
 // Set EJS as view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
+// Register body parser
+app.use(express.urlencoded({ extended: true }));
 app.use("/", userRouter);
 
 // Server
