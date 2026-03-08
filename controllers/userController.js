@@ -4,10 +4,10 @@ exports.getUser = (req, res) => {
 };
 
 exports.displayForm = (req, res) => {
-  res.render("form");
+  res.render("form", { title: "Create username" });
 };
 
 exports.handleSubmit = (req, res) => {
   console.log("username to be saved: ", req.body.username);
-  res.send(req.body.username);
+  res.redirect("/");
 };
